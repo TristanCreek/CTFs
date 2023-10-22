@@ -31,7 +31,7 @@ def left_shift(s, n):
 
 The array of strings was manually created. The indices of the words that produce the flag are 41, 2, 18, 39, 35, and 30. Therefore, the password recovery string provided to the players can be generated with the following code. A space is intentionally added to the end of the “answer”  string so the resulting base64 ends in two equal signs.
 
-```
+```python
 import base64
 def right_shift(s, n):
     return ''.join(chr(ord(char) + n) for char in s)
@@ -45,7 +45,7 @@ print(shifted_answer)
 
 One example of how the players are intended to solve this is provided below. As the hints imply, the goal is to shift the password recovery string until it results in a string that ends in an equal sign which may indicate it is Base64. Shifting the string 58 times results in an invalid character, so checking all left shifts from 0 to 57 will result in only one string that ends in an equal sign after shifting left 8 times. The resulting base64 string decodes to “fourty-one two eighteen thirty-nine thirty-five thirty “.
 
-```
+```python
 shift_b64 = ""
 for i in range(0,57):
     shifted = left_shift("buA9kvZ=T_A}b[J8l:@ob_tviPZtb_<olOpxkvZ=T_=xju]olOpxkvZ=T_bxlu]olOpxkvZ=QIEE", i)
@@ -58,7 +58,7 @@ print(dec)
 
 Finally, these numbers are passed to print_password() in an array to print the flag.
 
-```
+```python
 print_password([41, 2, 18, 39, 35, 30])
 ```
 
