@@ -1,0 +1,1 @@
+The provided SOLUTION.md is ripped straight from the development board for DeadFace 2023. It includes not just the question as provided to the player, but it also includes the python code I used to create the recovery key as well as the intended solution Python code.
